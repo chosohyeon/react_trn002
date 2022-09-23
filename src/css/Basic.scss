@@ -1,5 +1,5 @@
 * {
-    // outline: 1px solid tomato;
+    outline: 1px solid tomato;
     /* 난제 지우기~~ */
 }
 
@@ -21,28 +21,32 @@ body {
             color: #fff;
             font-size: 15px;
             text-align: center;
-            vertical-align: middle;
+            line-height: 35px;
         }
     }
 
     .menu {
-        height: 150px;
-        // background-colorgb(106, 106, 106)own;
-        align-items: center;
-
         h1 {
-            width: 110px;
-            margin: 20px auto;
+            width: 90px;
+            padding: 23px 0;
+            margin: 0 auto;
         }
 
         nav {
+            display: flex;
             border-top: 1px solid rgb(233, 233, 233);
             border-bottom: 1px solid rgb(233, 233, 233);
+
 
             ul {
                 display: flex;
                 gap: 100px;
                 line-height: 50px;
+                margin: 0 auto;
+
+                li {
+                    font-size: 15px;
+                }
             }
         }
 

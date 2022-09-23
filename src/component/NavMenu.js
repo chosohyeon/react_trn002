@@ -10,7 +10,7 @@ const NAVLINK = [
 
 const NavMenu = () => {
     return (
-        <ul className='inner'>
+        <ul>
             {
                 NAVLINK.map((it, idx) => {
                     return (

@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper";
+import { Autoplay } from "swiper";
 
 const MAIN = [
     { id: 1, link: "/" },
@@ -11,26 +11,43 @@ const MAIN = [
 ]
 
 const MainVisual = () => {
+    const [num, setNum] = useState();
+    const MS = useRef(null);
     return (
         <section className='MainVisual'>
-            <Swiper
-                pagination={true}
-                modules={[Pagination]}
-                className="mySwiper"
+            <Swiper className='Mainslide'
+                loop={true}
+                autoplay={{
+                    delay: 4000,
+                    disableOnInteraction: false,
+                }}
+                modules={[Autoplay]}
+                onSlideChange={it => setNum(it.realIndex)}
+                ref={MS}
             >
                 {
                     MAIN.map((mv, idx) => {
                         return (
-
                             <SwiperSlide>
-                                <figure key={mv.id}>
-                                    <img src={`${process.env.PUBLIC_URL}/assets/images/mainvisual0${idx + 1}.png`} alt="" />
-                                </figure>
+                                <li key={mv.id}>
+                                    <a>
+                                        <img src={`${process.env.PUBLIC_URL}/assets/images/mainvisual0${idx + 1}.png`} alt="" />
+                                    </a>
+                                </li>
                             </SwiperSlide>
                         )
                     })
                 }
             </Swiper>
+            <div className='dots'>
+                {
+                    MAIN.map((dot, idx) => {
+                        return (
+                            <li className={num === idx && 'on'} onClick={() => { MS.current.swiper.slideTo(idx + 1) }}></li>
+                        )
+                    })
+                }
+            </div>
         </section>
     )
 }

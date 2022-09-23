@@ -1,0 +1,112 @@
+.Main {
+    .MainVisual {
+        position: relative;
+
+        li {
+            height: calc(100vh - 192px);
+
+            a {
+                position: relative;
+                display: block;
+                height: calc(100vh - 192px);
+
+                img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+
+        .dots {
+            position: absolute;
+            display: flex;
+            gap: 30px;
+            bottom: 50px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 999;
+
+            li {
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                border: 1px solid #ffffff;
+                background: rgba(235, 235, 235, 0.5);
+
+                &::after {
+                    content: "";
+                    position: relative;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    display: block;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    transition: 0.5s;
+                }
+
+                &.on {
+                    background: #ffffff;
+                }
+
+                &.on {
+                    &::after {
+                        width: 30px;
+                        height: 30px;
+                        border: 1px solid #ffffff;
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+    .Advertisement {
+        background: url(../../public/assets/images/Ad_background.jpg) no-repeat top center/cover;
+        padding: 150px 0;
+
+        div {
+            text-align: center;
+
+            h2 {
+                font-family: 'Nanum Myeongjo';
+                font-size: 36px;
+                font-weight: 300;
+                line-height: 45px;
+                margin-bottom: 40px;
+            }
+
+            p {
+                font-size: 17px;
+                margin-bottom: 60px;
+            }
+
+            .btn {
+                button {
+                    display: inline-block;
+                    border: none;
+                    border-radius: 0%;
+                    width: 300px;
+                    font-size: 15px;
+                    padding: 15px 0;
+                    cursor: pointer;
+                }
+
+                .left {
+                    background-color: black;
+                    color: #ffffff;
+                }
+
+                .right {
+                    background-color: #ffffff;
+                    color: black;
+                }
+            }
+        }
+    }
+}

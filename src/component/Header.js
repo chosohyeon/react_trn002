@@ -17,7 +17,6 @@ const Header = () => {
                 <ul>
                     <Swiper
                         loop={true}
-                        direction={'vertical'}
                         autoplay={{
                             delay: 4000,
                             disableOnInteraction: false,
