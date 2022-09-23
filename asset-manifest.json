@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/react_trn002/static/css/main.5a187336.css",
+    "main.js": "/react_trn002/static/js/main.e5fe9b67.js",
+    "static/media/Ad_background.jpg": "/react_trn002/static/media/Ad_background.41b5d5088bd1e1c07068.jpg",
+    "index.html": "/react_trn002/index.html",
+    "main.5a187336.css.map": "/react_trn002/static/css/main.5a187336.css.map",
+    "main.e5fe9b67.js.map": "/react_trn002/static/js/main.e5fe9b67.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5a187336.css",
+    "static/js/main.e5fe9b67.js"
+  ]
+}
